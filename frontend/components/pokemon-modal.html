@@ -1,0 +1,57 @@
+<div class="modal-overlay" id="pokemon-modal-overlay">
+  <div class="modal-sheet" id="pokemon-modal">
+    <div class="modal-header">
+      <h2 id="pokemon-modal-title">Añadir Pokémon</h2>
+      <button class="modal-close" id="close-pokemon-modal" aria-label="Cerrar">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+
+    <form id="pokemon-form">
+      <input type="hidden" id="pokemon-id">
+
+      <label for="pokemon-name">Nombre</label>
+      <input type="text" id="pokemon-name" placeholder="Ej. Gengar, Mewtwo..." required>
+
+      <label for="pokemon-level">Nivel (1-100)</label>
+      <div class="stepper">
+        <button type="button" class="stepper-btn" data-step="level" data-dir="-1">−</button>
+        <input type="number" id="pokemon-level" min="1" max="100" value="50" required>
+        <button type="button" class="stepper-btn" data-step="level" data-dir="1">+</button>
+      </div>
+
+      <label for="pokemon-hp">HP</label>
+      <div class="stepper">
+        <button type="button" class="stepper-btn" data-step="hp" data-dir="-1">−</button>
+        <input type="number" id="pokemon-hp" min="1" max="999" value="100" required>
+        <button type="button" class="stepper-btn" data-step="hp" data-dir="1">+</button>
+      </div>
+
+      <label>Tipos elementales</label>
+      <div class="chip-selector" id="pokemon-types-chips"></div>
+
+      <label for="pokemon-image">Imagen (opcional)</label>
+      <input type="file" id="pokemon-image" accept="image/*" hidden>
+      <label for="pokemon-image" class="image-upload-dropzone">
+        <img class="image-upload-preview hidden" id="pokemon-image-preview" src="" alt="">
+
+        <div class="image-upload-placeholder" id="pokemon-image-placeholder">
+          <span class="material-symbols-outlined">add_photo_alternate</span>
+          <span class="image-upload-text">Subir imagen</span>
+          <span class="image-upload-hint">PNG o JPG</span>
+        </div>
+
+        <button type="button" class="image-upload-remove hidden" id="pokemon-image-remove" aria-label="Quitar imagen">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </label>
+
+      <p id="pokemon-form-error" class="form-error hidden"></p>
+
+      <div class="modal-actions">
+        <button type="button" class="btn-secondary" id="cancel-pokemon-modal">Cancelar</button>
+        <button type="submit" class="btn-holo" id="save-pokemon-btn">Guardar</button>
+      </div>
+    </form>
+  </div>
+</div>
