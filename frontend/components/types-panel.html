@@ -1,0 +1,30 @@
+<section id="types" class="tab-panel">
+  <div class="section-head">
+    <h1 class="hero-title">Gestión de Tipos</h1>
+    <button class="btn-holo btn-holo-inline" id="open-type-modal">
+      <span class="material-symbols-outlined">add_circle</span>
+      Nuevo Tipo
+    </button>
+  </div>
+
+  <p id="type-status" class="status-msg"></p>
+
+  <div class="types-list" id="types-list"></div>
+
+  <template id="type-row-template">
+    <div class="type-row">
+      <div>
+        <div class="type-row-name"></div>
+        <div class="type-row-id"></div>
+      </div>
+      <div class="card-actions">
+        <button class="card-action-btn edit-btn">
+          <span class="material-symbols-outlined" style="font-size:18px;">edit</span>
+        </button>
+        <button class="card-action-btn delete delete-btn">
+          <span class="material-symbols-outlined" style="font-size:18px;">delete</span>
+        </button>
+      </div>
+    </div>
+  </template>
+</section>
