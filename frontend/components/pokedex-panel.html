@@ -1,0 +1,101 @@
+<section id="pokedex" class="tab-panel">
+
+  <section class="stats-banner">
+    <div class="stats-banner-header">
+      <span class="material-symbols-outlined">dataset</span>
+      <h2>Centro de Gestión</h2>
+    </div>
+    <div class="stats-grid">
+      <div class="stat-item">
+        
+        <div class="stat-text">
+          <span class="stat-value" id="stat-total">0 Pokémon</span>
+          <span class="stat-label">Total registrados</span>
+        </div>
+      </div>
+      <div class="stat-item">
+        <span class="material-symbols-outlined stat-icon ok">sync</span>
+        <div class="stat-text">
+          <span class="stat-value">Sincronizada</span>
+          <span class="stat-label">API online</span>
+        </div>
+      </div>
+      <div class="stat-item">
+        <span class="material-symbols-outlined stat-icon">category</span>
+        <div class="stat-text">
+          <span class="stat-value" id="stat-types">0 Tipos</span>
+          <span class="stat-label">Disponibles</span>
+        </div>
+      </div>
+    </div>
+    <button class="btn-holo" id="open-pokemon-modal">
+      <span class="material-symbols-outlined">add_circle</span>
+      Nuevo Pokémon
+    </button>
+  </section>
+
+  <section class="filters">
+    <div class="search-box">
+      <span class="material-symbols-outlined">search</span>
+      <input type="search" id="search-pokemon" placeholder="Buscar por nombre...">
+    </div>
+    <div class="type-chip-scroller" id="filter-type-scroller">
+      <button class="type-chip active" data-type-id="">Todos</button>
+    </div>
+  </section>
+
+  <p id="pokemon-status" class="status-msg"></p>
+
+  <section class="card-grid" id="pokemon-grid"></section>
+
+  <!-- Plantillas usadas por PokemonCard.js -->
+  <template id="pokemon-card-template">
+    <article class="pokemon-card">
+
+      <!-- Recuadro de la imagen: ocupa todo su ancho, sin huecos -->
+      <div class="pokemon-image-wrap">
+        <img class="pokemon-image hidden" src="" alt="">
+        <div class="pokemon-image-placeholder">
+          
+        </div>
+
+        <span class="pokemon-level-badge">
+          <span class="material-symbols-outlined" style="font-size:14px;">star</span>
+          Nv. <span class="level-value"></span>
+        </span>
+
+        <div class="card-actions">
+          <button class="card-action-btn edit-btn" aria-label="Editar">
+            <span class="material-symbols-outlined" style="font-size:18px;">edit</span>
+          </button>
+          <button class="card-action-btn delete delete-btn" aria-label="Borrar">
+            <span class="material-symbols-outlined" style="font-size:18px;">delete</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Cuerpo con fondo sólido: nombre, HP y tipos -->
+      <div class="pokemon-card-body">
+        <span class="pokemon-name"></span>
+
+        <div class="hp-row">
+          <div class="hp-row-top">
+            <span>Salud</span>
+            <span class="hp-value"></span>
+          </div>
+          <div class="hp-bar"><div class="hp-bar-fill" style="width:100%"></div></div>
+        </div>
+
+        <div class="type-chips-row"></div>
+      </div>
+    </article>
+  </template>
+
+  <template id="type-badge-template">
+    <span class="type-badge">
+      <span class="material-symbols-outlined type-badge-icon" style="font-size:12px;vertical-align:middle;"></span>
+      <span class="type-badge-name"></span>
+    </span>
+  </template>
+
+</section>
