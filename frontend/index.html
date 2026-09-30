@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pokémon API</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Sora:wght@600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+<header data-include="components/header.html"></header>
+
+<main class="page">
+  <div data-include="components/docs-panel.html"></div>
+  <div data-include="components/pokedex-panel.html"></div>
+  <div data-include="components/types-panel.html"></div>
+</main>
+
+<nav data-include="components/bottom-nav.html"></nav>
+
+<div data-include="components/pokemon-modal.html"></div>
+<div data-include="components/type-modal.html"></div>
+<div data-include="components/confirm-modal.html"></div>
+
+<div id="toast" class="toast hidden"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+<!-- Carga los componentes HTML antes que nada -->
+<script src="./js/LoadComponent.js"></script>
+
+<!-- Estado y configuración compartida -->
+<script src="./js/state.js"></script>
+
+<!-- Componentes JS (funciones de plantilla reutilizables) -->
+<script src="./js/toast.js"></script>
+<script src="./js/pokemon-card.js"></script>
+<script src="./js/type-row.js"></script>
+
+<!-- Capa de datos -->
+<script src="./js/api.js"></script>
+
+<!-- Lógica de interfaz -->
+<script src="./js/ui.js"></script>
+<script src="./js/pokemon.js"></script>
+<script src="./js/type.js"></script>
+
+<!-- Arranque de la app (espera a que los componentes estén cargados) -->
+<script src="./js/main.js"></script>
+</body>
+</html>
