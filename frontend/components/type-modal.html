@@ -1,0 +1,24 @@
+<div class="modal-overlay" id="type-modal-overlay">
+  <div class="modal-sheet modal-sheet-sm" id="type-modal">
+    <div class="modal-header">
+      <h2 id="type-modal-title">Añadir Tipo</h2>
+      <button class="modal-close" id="close-type-modal" aria-label="Cerrar">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+
+    <form id="type-form">
+      <input type="hidden" id="type-id">
+
+      <label for="type-name">Nombre del tipo</label>
+      <input type="text" id="type-name" placeholder="Ej. Fuego" required>
+
+      <p id="type-form-error" class="form-error hidden"></p>
+
+      <div class="modal-actions">
+        <button type="button" class="btn-secondary" id="cancel-type-modal">Cancelar</button>
+        <button type="submit" class="btn-holo">Guardar</button>
+      </div>
+    </form>
+  </div>
+</div>
