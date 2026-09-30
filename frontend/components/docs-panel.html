@@ -1,0 +1,69 @@
+<section id="docs" class="tab-panel active">
+  <h1 class="hero-title">Documentación de la API</h1>
+  <p class="hero-sub">Endpoints REST para gestionar Pokémon y sus tipos elementales.</p>
+
+  <div class="endpoints-grid">
+
+    <article class="endpoint-card">
+      <span class="method-badge get">GET</span>
+      <code>/pokemon/</code>
+      <p>Devuelve todos los Pokémon, incluyendo sus tipos.</p>
+    </article>
+
+    <article class="endpoint-card">
+      <span class="method-badge get">GET</span>
+      <code>/pokemon/{id}</code>
+      <p>Devuelve un Pokémon concreto por su id.</p>
+    </article>
+
+    <article class="endpoint-card">
+      <span class="method-badge post">POST</span>
+      <code>/pokemon/</code>
+      <p>Crea un Pokémon nuevo.</p>
+      <pre>{
+  "name": "Charizard",
+  "level": 36,
+  "hp": 78,
+  "type_ids": [1, 2]
+}</pre>
+    </article>
+
+    <article class="endpoint-card">
+      <span class="method-badge put">PUT</span>
+      <code>/pokemon/{id}</code>
+      <p>Actualiza un Pokémon existente.</p>
+    </article>
+
+    <article class="endpoint-card">
+      <span class="method-badge delete">DELETE</span>
+      <code>/pokemon/{id}</code>
+      <p>Elimina un Pokémon.</p>
+    </article>
+
+    <article class="endpoint-card">
+      <span class="method-badge get">GET</span>
+      <code>/types/</code>
+      <p>Devuelve todos los tipos.</p>
+    </article>
+
+    <article class="endpoint-card">
+      <span class="method-badge post">POST</span>
+      <code>/types/</code>
+      <p>Crea un tipo nuevo.</p>
+      <pre>{ "name": "Fuego" }</pre>
+    </article>
+
+    <article class="endpoint-card">
+      <span class="method-badge put">PUT</span>
+      <code>/types/{id}</code>
+      <p>Actualiza un tipo existente.</p>
+    </article>
+
+    <article class="endpoint-card">
+      <span class="method-badge delete">DELETE</span>
+      <code>/types/{id}</code>
+      <p>Elimina un tipo.</p>
+    </article>
+
+  </div>
+</section>
